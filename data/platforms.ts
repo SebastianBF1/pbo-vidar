@@ -253,13 +253,13 @@ export const platforms: Platform[] = [
       },
       keySpecs: ["length", "width", "systemWeight", "topSpeed", "bldcMotor", "ratedLoad"],
       overview: {
-        // Real USV-configuration photograph (differs from the studio-render hero). Native 360×480 → kept small.
+        // USV configuration: deck with equipment case and antennas (differs from the studio hero).
         image: { ...IMAGES.piranhaUsv, position: "50% 50%" },
-        aspect: 540 / 720,
+        aspect: 885 / 1109,
         span: 5,
         blocks: [{ id: "core" }, { id: "integration", status: "target" }, { id: "autonomy", status: "optional" }],
       },
-      // The real PIRANHA photographs are low-resolution (~300 px wide at source), so they share one row at modest size.
+      // Field configuration, top view and standing view share one row.
       gallery: [
         [
           { id: "field", image: { ...IMAGES.piranhaCard, position: "50% 50%" } },

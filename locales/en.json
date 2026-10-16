@@ -118,7 +118,7 @@
     "items": {
       "piranha": {
         "category": "High-speed electric unmanned surface vehicle",
-        "imageAlt": "PIRANHA on a sandy shore in field configuration"
+        "imageAlt": "PIRANHA at the water’s edge in field configuration"
       },
       "ragnar28": {
         "category": "Unmanned surface vehicle (USV)",
@@ -293,7 +293,7 @@
       },
       "gallery": {
         "field": {
-          "alt": "PIRANHA on a sandy shore in field configuration",
+          "alt": "PIRANHA at the water’s edge in field configuration",
           "caption": "Field configuration"
         },
         "top": {
@@ -301,7 +301,7 @@
           "caption": "Top view"
         },
         "hull": {
-          "alt": "PIRANHA hull side with water-jet unit",
+          "alt": "PIRANHA standing upright: hull side, deck with equipment case and water-jet unit",
           "caption": "Hull side"
         }
       }

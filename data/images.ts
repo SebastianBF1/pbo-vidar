@@ -14,10 +14,10 @@ export const IMAGES = {
   // ---------------------------------------------------------------- PIRANHA
   homeHeroPiranha: { src: asset("/images/piranha-hero-illustration.webp"), width: 1672, height: 941 },
   heroPiranha: { src: asset("/images/piranha-studio.jpg"), width: 2048, height: 1242 },
-  piranhaCard: { src: asset("/images/piranha-field.jpg"), width: 592, height: 452 },
-  piranhaTop: { src: asset("/images/piranha-top.jpg"), width: 604, height: 452 },
-  piranhaUsv: { src: asset("/images/piranha-usv.jpg"), width: 540, height: 720 },
-  piranhaHull: { src: asset("/images/piranha-hull.jpg"), width: 392, height: 840 },
+  piranhaCard: { src: asset("/images/piranha-shore.webp"), width: 1448, height: 1086 },
+  piranhaTop: { src: asset("/images/piranha-top-view.webp"), width: 1448, height: 1086 },
+  piranhaUsv: { src: asset("/images/piranha-deck.webp"), width: 885, height: 1109 },
+  piranhaHull: { src: asset("/images/piranha-standing.webp"), width: 731, height: 1098 },
   // ---------------------------------------------------------------- RAGNAR 28
   ragnarGraded: { src: asset("/images/ragnar-28-graded.jpg"), width: 1024, height: 1024 },
   ragnarModules: { src: asset("/images/ragnar-28-poster.jpg"), width: 692, height: 516 },
