@@ -190,16 +190,6 @@
       ]
     }
   },
-  "ragnarFeature": {
-    "label": "Platform 02",
-    "descriptor": [
-      "Discreet",
-      "Force multiplier",
-      "Built for Ukraine"
-    ],
-    "cta": "View Ragnar 28",
-    "imageAlt": "RAGNAR 28 underway with crew aboard"
-  },
   "process": {
     "title": "Our development approach",
     "steps": [

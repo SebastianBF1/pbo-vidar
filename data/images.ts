@@ -20,7 +20,6 @@ export const IMAGES = {
   piranhaHull: { src: asset("/images/piranha-hull.jpg"), width: 392, height: 840 },
   // ---------------------------------------------------------------- RAGNAR 28
   ragnarGraded: { src: asset("/images/ragnar-28-graded.jpg"), width: 1024, height: 1024 },
-  ragnarFeature: { src: asset("/images/ragnar-28.jpg"), width: 1024, height: 1024 },
   ragnarModules: { src: asset("/images/ragnar-28-poster.jpg"), width: 692, height: 516 },
   ragnarPosterWide: { src: asset("/images/ragnar-28-poster-wide.jpg"), width: 1490, height: 642 },
   // ---------------------------------------------------------------- PBO 4 "MUNIN"

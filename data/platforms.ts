@@ -91,8 +91,6 @@ export interface Platform {
   name: string;
   /** Homepage platform-card image. */
   image: PlatformImage;
-  /** Large image for the homepage image-led feature section, when different from the card image. */
-  featureImage?: PlatformImage;
   /** Key figures shown on the homepage card (max 4–6). */
   cardSpecs: Spec[];
   /** Full published specification list. Render via publicSpecs(). */
@@ -276,7 +274,6 @@ export const platforms: Platform[] = [
     key: "ragnar28",
     name: "RAGNAR 28",
     image: { ...IMAGES.ragnarGraded, position: "50% 56%" },
-    featureImage: { ...IMAGES.ragnarFeature, position: "58% 62%" },
     cardSpecs: pick(ragnarSpecs, ["length", "maxSpeed", "payload", "rangeCruise"]),
     specs: ragnarSpecs,
     page: {
