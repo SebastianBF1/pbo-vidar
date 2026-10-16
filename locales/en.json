@@ -1,0 +1,448 @@
+{
+  "meta": {
+    "title": "PBO VIDAR — Maritime Solutions for a Safer Tomorrow",
+    "description": "PBO Vidar is a Ukrainian-Norwegian maritime technology company focused on unmanned surface platforms, rapid system integration and mission-driven engineering."
+  },
+  "nav": {
+    "about": "About",
+    "platforms": "Platforms",
+    "technology": "Technology",
+    "impact": "Impact",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "home": "PBO VIDAR — home",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": [
+      "Maritime solutions",
+      "for a safer tomorrow"
+    ],
+    "title": "PIRANHA",
+    "subtitle": "High-speed electric unmanned surface vehicle",
+    "roles": [
+      "Surveillance",
+      "Rapid response",
+      "Remote missions",
+      "Sensor carrier"
+    ],
+    "ctaPrimary": "View Piranha",
+    "ctaSecondary": "Our platforms",
+    "imageAlt": "PIRANHA platform shown from deck and hull side",
+    "figure": "Fig. 01 — Deck / Hull",
+    "specsLabel": "PIRANHA — platform data"
+  },
+  "units": {
+    "m": "m",
+    "kg": "kg",
+    "kmh": "km/h",
+    "knots": "knots",
+    "kW": "kW",
+    "km": "km",
+    "nmi": "nmi",
+    "L": "L",
+    "hp": "hp"
+  },
+  "qualifiers": {
+    "upTo": "Up to {v}"
+  },
+  "values": {
+    "linearWaterJet": "Linear water-jet",
+    "compositeEpsGlass": "Composite EPS / glass-fibre",
+    "nativeControl": "Native 2.4 GHz – up to 600 m LOS",
+    "integrationStack": "GPS/GNSS navigation, GSM/LTE + Starlink, real-time telemetry, simultaneous day and thermal video, Ground Control Station, Emergency Stop",
+    "available": "Available",
+    "inboardDiesel": "Inboard diesel",
+    "fiberglassComposite": "Fiberglass composite",
+    "electric": "Electric",
+    "gasolineEngine": "Gasoline engine",
+    "supercap": "Supercap",
+    "autonomous": "Autonomous",
+    "compositeFiberglass": "Composite (fiberglass)",
+    "muninOperatingArea": "Rivers, lakes, coastal waters, offshore",
+    "muninEquipment": "Cameras, communication systems, sensors, payload modules",
+    "onboardOperation": "Onboard operation",
+    "electricJet": "Electric jet propulsion"
+  },
+  "specs": {
+    "length": "Length",
+    "width": "Width",
+    "beam": "Beam",
+    "height": "Height",
+    "systemWeight": "System weight",
+    "weightEmpty": "Weight (empty)",
+    "topSpeed": "Top speed",
+    "maxSpeed": "Max speed",
+    "bldcMotor": "BLDC motor",
+    "ratedLoad": "Rated load",
+    "payload": "Payload capacity",
+    "range": "Range",
+    "rangeCruise": "Range (cruise)",
+    "engines": "Engines",
+    "fuelTank": "Fuel tank",
+    "propulsion": "Propulsion",
+    "powerSupply": "Power supply",
+    "control": "Control",
+    "hull": "Hull material",
+    "operatingArea": "Operating area",
+    "estSpeed50": "Est. speed / 50 kg load",
+    "estRange50": "Est. range / 50 kg load",
+    "confirmedPayload": "Confirmed payload",
+    "inflatableHull": "Inflatable hull",
+    "jetDrive": "Jet drive",
+    "battery": "Battery",
+    "buoyancy": "Buoyancy",
+    "engineType": "Engine type",
+    "propulsionOption": "Propulsion option",
+    "remoteControl": "Remote control",
+    "optionalEquipment": "Optional equipment",
+    "integration": "Integration",
+    "autonomy": "Autonomous configuration"
+  },
+  "status": {
+    "calculated": "Calculated",
+    "optional": "Optional",
+    "target": "Integration target"
+  },
+  "platforms": {
+    "label": "Our platforms",
+    "title": "Maritime robotics. USV platforms. System integration.",
+    "statement": [
+      "Scandinavian platform.",
+      "Engineered in Ukraine."
+    ],
+    "viewDetails": "View details",
+    "swipe": "Swipe",
+    "items": {
+      "piranha": {
+        "category": "High-speed electric unmanned surface vehicle",
+        "imageAlt": "PIRANHA on a sandy shore in field configuration"
+      },
+      "ragnar28": {
+        "category": "Unmanned surface vehicle (USV)",
+        "imageAlt": "RAGNAR 28 underway on open water"
+      },
+      "munin": {
+        "category": "Unmanned surface vessel",
+        "imageAlt": "MUNIN underway on a lake"
+      },
+      "jetSled": {
+        "category": "Electric platform for rescue & logistics",
+        "imageAlt": "JET SLED inflatable hulls with jet drive",
+        "note": "Speed and range are calculated at 50 kg payload; figures at 400 kg remain unconfirmed."
+      }
+    }
+  },
+  "fieldOps": {
+    "label": "Field operations",
+    "title": "Practical testing in demanding conditions",
+    "imageAlt": "Two operators launching an inflatable sled into cold water"
+  },
+  "about": {
+    "label": "About PBO Vidar",
+    "title": "About PBO Vidar",
+    "body": [
+      "PBO Vidar is a Ukrainian-Norwegian maritime technology company focused on unmanned surface platforms, rapid system integration and mission-driven engineering.",
+      "We combine Scandinavian platform expertise with Ukrainian development, testing and operational insight."
+    ],
+    "cta": "Learn more",
+    "pillars": [
+      {
+        "title": "Ukrainian engineering",
+        "body": "Local production and supply chain development."
+      },
+      {
+        "title": "Practical experience",
+        "body": "Real operational knowledge embedded in design."
+      },
+      {
+        "title": "Real impact",
+        "body": "Solutions for defence, security and critical infrastructure."
+      }
+    ],
+    "imageAlt": "Operator on the shoreline with PBO 4 MUNIN underway",
+    "imageCaption": "PBO 4 “MUNIN” — Remote operation"
+  },
+  "capabilities": {
+    "label": "Technology",
+    "whatWeDo": {
+      "title": "What we do",
+      "items": [
+        "Unmanned surface vehicle platforms",
+        "Navigation and remote-control integration",
+        "GSM/LTE, Starlink and telemetry systems",
+        "Day and thermal sensor integration",
+        "Prototype development and field testing",
+        "Local engineering and technical support"
+      ]
+    },
+    "whyUs": {
+      "title": "Why PBO Vidar",
+      "items": [
+        "Fast adaptation to mission requirements",
+        "Modular platform and payload architecture",
+        "Development close to end-user needs",
+        "Practical testing in demanding conditions",
+        "From platform supply to full integration",
+        "Optional autonomous configurations"
+      ]
+    }
+  },
+  "ragnarFeature": {
+    "label": "Platform 02",
+    "descriptor": [
+      "Discreet",
+      "Force multiplier",
+      "Built for Ukraine"
+    ],
+    "cta": "View Ragnar 28",
+    "imageAlt": "RAGNAR 28 underway with crew aboard"
+  },
+  "process": {
+    "title": "Our development approach",
+    "steps": [
+      "Requirements",
+      "Engineering",
+      "Integration",
+      "Field testing"
+    ],
+    "notes": [
+      "Close to end-user needs",
+      "Modular platform and payload architecture",
+      "Navigation and remote-control integration",
+      "Practical testing in demanding conditions"
+    ]
+  },
+  "mission": {
+    "label": "Impact",
+    "statement": [
+      "Born in Scandinavia.",
+      "Made in Ukraine."
+    ],
+    "tagline": "Ukraine drives change",
+    "missionTitle": "Our mission",
+    "missionBody": "To provide reliable, innovative and mission-ready maritime solutions that strengthen Ukraine's security and contribute to a safer tomorrow.",
+    "visionTitle": "Our vision",
+    "visionBody": "To be a leading European developer and manufacturer of unmanned maritime systems, built on Ukrainian talent, innovation and real-world operational experience.",
+    "imageAlt": "Archipelago and river with a city skyline beyond, a vessel underway in the foreground"
+  },
+  "footer": {
+    "tagline": [
+      "Born in Scandinavia.",
+      "Made in Ukraine."
+    ],
+    "navTitle": "Navigate",
+    "contactTitle": "Contact",
+    "website": "www.pboukraine.com",
+    "email": "Email",
+    "socialTitle": "Follow PBO",
+    "socialLabel": "PBO Ukraine on {network}",
+    "languageTitle": "Language",
+    "copyright": "PBO VIDAR"
+  },
+  "productPage": {
+    "back": "All platforms",
+    "index": "Platform {n} / {total}",
+    "keySpecs": "{name} — key specifications",
+    "keySpecsNote": "Manufacturer data",
+    "overviewLabel": "Overview",
+    "technicalLabel": "Technical specifications",
+    "legend": {
+      "stated": "Manufacturer specification",
+      "calculated": "Calculated / estimated",
+      "optional": "Optional configuration",
+      "target": "Integration target"
+    },
+    "groups": {
+      "dimensions": "Dimensions & weight",
+      "performance": "Performance",
+      "propulsion": "Propulsion & power",
+      "control": "Control & integration",
+      "construction": "Construction & operation",
+      "equipment": "Options & equipment"
+    },
+    "galleryLabel": "Imagery",
+    "exploreLabel": "Our platforms",
+    "exploreTitle": "Other platforms",
+    "metaTitle": "{name} — PBO VIDAR"
+  },
+  "products": {
+    "piranha": {
+      "description": "Scandinavian platform. Engineered in Ukraine.",
+      "roles": [
+        "Surveillance",
+        "Rapid response",
+        "Remote missions",
+        "Sensor carrier"
+      ],
+      "heroAlt": "PIRANHA shown from deck and hull side",
+      "overview": {
+        "heading": "Fast. Compact. Connected.",
+        "imageAlt": "PIRANHA deck with an equipment case and antennas",
+        "blocks": {
+          "core": {
+            "title": "Core platform",
+            "items": [
+              "Linear water-jet propulsion",
+              "12 L buoyancy",
+              "Composite EPS / glass-fibre hull",
+              "Native 2.4 GHz control – up to 600 m LOS"
+            ]
+          },
+          "integration": {
+            "title": "PBO VIDAR integration target",
+            "body": "GPS/GNSS navigation, GSM/LTE + Starlink, real-time telemetry, simultaneous day and thermal video, Ground Control Station and Emergency Stop."
+          },
+          "autonomy": {
+            "title": "Optional autonomous configuration available"
+          }
+        },
+        "caption": "USV configuration"
+      },
+      "gallery": {
+        "field": {
+          "alt": "PIRANHA on a sandy shore in field configuration",
+          "caption": "Field configuration"
+        },
+        "top": {
+          "alt": "PIRANHA seen from above on a sandy shore",
+          "caption": "Top view"
+        },
+        "hull": {
+          "alt": "PIRANHA hull side with water-jet unit",
+          "caption": "Hull side"
+        }
+      }
+    },
+    "ragnar28": {
+      "description": "Designed for real-world missions.",
+      "roles": [
+        "Discreet",
+        "Force multiplier",
+        "Built for Ukraine"
+      ],
+      "heroAlt": "RAGNAR 28 underway on open water",
+      "overview": {
+        "heading": "Modular design for multiple missions.",
+        "chips": [
+          "Autonomy",
+          "Payload",
+          "Endurance",
+          "Real impact"
+        ],
+        "imageAlt": "RAGNAR 28 deck with payload cases and sensor mast",
+        "blocks": {
+          "build": {
+            "title": "Platform",
+            "items": [
+              "Fiberglass composite hull",
+              "Inboard diesel engines"
+            ]
+          }
+        }
+      },
+      "gallery": {
+        "wide": {
+          "alt": "RAGNAR 28 underway, full vessel with payload cases and sensor mast"
+        }
+      }
+    },
+    "munin": {
+      "description": "Discreet. Reliable. Effective.",
+      "roles": [
+        "Rivers",
+        "Coastal waters",
+        "Surveillance",
+        "Special missions"
+      ],
+      "heroAlt": "Illustration of PBO 4 MUNIN underway on a misty river",
+      "overview": {
+        "heading": "Designed for rivers, coastal and offshore operations.",
+        "lead": "Unmanned solutions for a safer tomorrow.",
+        "blocks": {
+          "propulsion": {
+            "title": "Electric propulsion",
+            "body": "Silent operation."
+          },
+          "equipment": {
+            "title": "Optional equipment",
+            "body": "Cameras, communication systems, sensors, payload modules."
+          }
+        }
+      },
+      "page": {
+        "keySpecs": "Key specifications",
+        "views": {
+          "title": "Technical views",
+          "note": "Illustrative views · not to scale",
+          "expand": "Enlarge: {view}",
+          "close": "Close",
+          "front": "Front view",
+          "side": "Side view",
+          "rear": "Rear view",
+          "frontAlt": "PBO 4 MUNIN seen from the bow on a river",
+          "sideAlt": "Illustrated side view of PBO 4 MUNIN with length and height dimension lines",
+          "rearAlt": "Illustrated rear view of PBO 4 MUNIN with beam and height dimension lines"
+        },
+        "specsTitle": "Technical specifications",
+        "features": {
+          "title": "Key features",
+          "speed": "High speed",
+          "range": "Long range",
+          "payload": "Payload",
+          "electric": "Electric propulsion",
+          "electricSub": "Silent operation",
+          "control": "Unmanned",
+          "controlSub": "Optional remote control",
+          "waters": "Rivers, coastal & offshore operations"
+        },
+        "missions": {
+          "title": "Mission profiles",
+          "actionAlt": "Illustration of PBO 4 MUNIN at speed on open water",
+          "surveillance": {
+            "title": "Surveillance",
+            "body": "Optional cameras, communication systems and sensors."
+          },
+          "special": {
+            "title": "Special missions",
+            "body": "Payload {payload}, with optional payload modules."
+          }
+        },
+        "environments": {
+          "title": "Operational environments",
+          "rivers": "Rivers",
+          "lakes": "Lakes",
+          "coastal": "Coastal waters",
+          "offshore": "Offshore"
+        }
+      }
+    },
+    "jetSled": {
+      "description": "Designed for fast deployment on rivers, lakes and coastal waters.",
+      "roles": [
+        "Onboard operation",
+        "Remote control option"
+      ],
+      "heroAlt": "JET SLED on a lake near a rocky shore",
+      "overview": {
+        "heading": "Rescue. Personnel movement. Logistics transport.",
+        "lead": "Potential uses include casualty evacuation, personnel and logistics transport.",
+        "imageAlt": "Two operators launching a Jet Sled from an icy shoreline",
+        "blocks": {
+          "propulsion": {
+            "title": "Electric jet propulsion"
+          },
+          "control": {
+            "title": "Control options",
+            "body": "Onboard operation; remote-control configuration available."
+          }
+        }
+      }
+    }
+  },
+  "i18n": {
+    "pending": "UA copy pending approval — English fallback shown"
+  }
+}
