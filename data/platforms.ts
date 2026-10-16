@@ -281,7 +281,7 @@ export const platforms: Platform[] = [
       keySpecs: ["length", "beam", "payload", "maxSpeed", "rangeCruise", "engines"],
       overview: {
         image: { ...IMAGES.ragnarModules, position: "50% 50%" },
-        aspect: 692 / 516,
+        aspect: 1448 / 1086,
         blocks: [{ id: "build" }],
       },
       gallery: [[{ id: "wide", image: { ...IMAGES.ragnarPosterWide, position: "50% 50%" } }]],
