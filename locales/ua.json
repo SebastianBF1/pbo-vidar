@@ -190,6 +190,9 @@
       ]
     }
   },
+  "technologyPage": {
+    "title": "Технології"
+  },
   "process": {
     "title": "Наш підхід до розробки",
     "steps": [

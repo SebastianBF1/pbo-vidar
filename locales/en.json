@@ -190,6 +190,9 @@
       ]
     }
   },
+  "technologyPage": {
+    "title": "Technology & capabilities"
+  },
   "process": {
     "title": "Our development approach",
     "steps": [

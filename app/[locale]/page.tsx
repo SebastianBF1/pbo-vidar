@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { AboutSection } from "@/components/AboutSection";
-import { DevelopmentSection } from "@/components/DevelopmentSection";
 import { FieldOperationsSection } from "@/components/FieldOperationsSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -11,7 +10,6 @@ import { OpportunitiesSection } from "@/components/OpportunitiesSection";
 import { PlatformsSection } from "@/components/PlatformsSection";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
-import { TechnologySection } from "@/components/TechnologySection";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
@@ -28,12 +26,12 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <main id="main">
         <Hero dict={dict} locale={locale} />
         <PlatformsSection dict={dict} locale={locale} />
-        <AboutSection dict={dict} locale={locale} />
-        <TechnologySection dict={dict} />
+        {/* Short introduction; the pillars and mission / vision are on the About page */}
+        <AboutSection dict={dict} locale={locale} variant="intro" />
         <FieldOperationsSection dict={dict} />
-        <DevelopmentSection dict={dict} />
         <OpportunitiesSection dict={dict} />
-        <MissionSection dict={dict} />
+        <MissionSection dict={dict} variant="brand" />
+        {/* What we do / Why PBO VIDAR and the development approach are on the Technology page */}
       </main>
       <Footer dict={dict} locale={locale} />
       {/* Review aid only: run `SHOW_I18N_BADGE=1 npm run dev` to see how many UA strings are still TODO_UA. */}

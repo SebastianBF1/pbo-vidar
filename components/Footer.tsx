@@ -5,9 +5,9 @@ import { fill } from "@/lib/format";
 import type { Dictionary } from "@/lib/i18n";
 import { IconFacebook, IconInstagram, IconMail, IconYouTube } from "./Icons";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { FOOTER_NAV, navHref } from "@/lib/nav";
 import { Logo } from "./Logo";
 
-const SECTIONS = ["about", "platforms", "technology", "impact", "contact"] as const;
 const SOCIAL_ICONS: Record<SocialId, ComponentType<SVGProps<SVGSVGElement>>> = {
   facebook: IconFacebook,
   instagram: IconInstagram,
@@ -31,10 +31,10 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
         <nav aria-label={f.navTitle} className="md:col-span-3">
           <p className="label">{f.navTitle}</p>
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-1 md:block md:space-y-1">
-            {SECTIONS.map((id) => (
+            {FOOTER_NAV.map((id) => (
               <li key={id}>
                 <Link
-                  href={`/${locale}#${id}`}
+                  href={navHref(id, locale)}
                   className="inline-flex min-h-10 items-center font-mono text-[0.75rem] uppercase tracking-[0.22em] text-fg/85 transition-colors duration-300 hover:text-cyan"
                 >
                   {dict.nav[id]}

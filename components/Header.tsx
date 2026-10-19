@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { HEADER_NAV, navHref } from "@/lib/nav";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { Logo } from "./Logo";
 
@@ -17,7 +18,6 @@ export interface NavLabels {
   home: string;
 }
 
-const SECTIONS = ["about", "platforms", "technology", "impact", "contact"] as const;
 
 export function Header({ locale, nav, tagline }: { locale: string; nav: NavLabels; tagline: string[] }) {
   const [scrolled, setScrolled] = useState(false);
@@ -65,10 +65,10 @@ export function Header({ locale, nav, tagline }: { locale: string; nav: NavLabel
         <div className="hidden items-center gap-8 lg:flex xl:gap-12">
           <nav aria-label="Primary">
             <ul className="flex items-center gap-7 xl:gap-10">
-              {SECTIONS.map((id) => (
+              {HEADER_NAV.map((id) => (
                 <li key={id}>
                   <Link
-                    href={`/${locale}#${id}`}
+                    href={navHref(id, locale)}
                     className="group relative py-2 font-mono text-[0.75rem] uppercase tracking-[0.2em] text-fg/85 transition-colors duration-300 hover:text-fg xl:text-[0.8125rem]"
                   >
                     {nav[id]}
@@ -119,7 +119,7 @@ export function Header({ locale, nav, tagline }: { locale: string; nav: NavLabel
         <div className="container-x relative flex flex-1 flex-col pt-28 pb-10">
           <nav aria-label="Mobile">
             <ul className="border-t border-line">
-              {SECTIONS.map((id, i) => (
+              {HEADER_NAV.map((id, i) => (
                 <li
                   key={id}
                   className="border-b border-line transition-[opacity,transform] duration-700 ease-out-expo"
@@ -130,7 +130,7 @@ export function Header({ locale, nav, tagline }: { locale: string; nav: NavLabel
                   }}
                 >
                   <Link
-                    href={`/${locale}#${id}`}
+                    href={navHref(id, locale)}
                     onClick={() => setOpen(false)}
                     className="arrow-link flex items-baseline justify-between py-5"
                   >

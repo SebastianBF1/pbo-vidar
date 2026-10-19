@@ -2,8 +2,13 @@ import Image from "next/image";
 import type { Dictionary } from "@/lib/i18n";
 import { IMAGES } from "@/data/images";
 
-export function MissionSection({ dict }: { dict: Dictionary }) {
+/**
+ * variant "brand" (homepage): the statement and tagline over the brand image.
+ * variant "full" (About page): the same, plus the Mission / Vision panel.
+ */
+export function MissionSection({ dict, variant = "brand" }: { dict: Dictionary; variant?: "brand" | "full" }) {
   const m = dict.mission;
+  const full = variant === "full";
   return (
     <section id="impact" aria-labelledby="impact-title" className="relative isolate overflow-hidden border-t border-line bg-ink">
       {/* Brand image (brochure aerial): image first on mobile, right half on desktop */}
@@ -24,7 +29,11 @@ export function MissionSection({ dict }: { dict: Dictionary }) {
         <div className="absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-ink via-ink/50 to-transparent lg:block" aria-hidden />
       </div>
 
-      <div className="container-x relative flex flex-col pb-20 md:pb-28 lg:min-h-[61.25rem] lg:justify-between lg:py-28">
+      <div
+        className={`container-x relative flex flex-col pb-20 md:pb-28 lg:py-28 ${
+          full ? "lg:min-h-[61.25rem] lg:justify-between" : "lg:min-h-[45rem] lg:justify-center"
+        }`}
+      >
         <div className="relative -mt-28 sm:-mt-36 lg:mt-0 lg:max-w-[50%] lg:pt-10" data-reveal>
           <p className="label flex items-center gap-3">
             <span className="h-1.5 w-1.5 bg-signal" aria-hidden />
@@ -42,23 +51,25 @@ export function MissionSection({ dict }: { dict: Dictionary }) {
         </div>
 
         {/* Mission / Vision: one panel, overlapping into the image on desktop */}
-        <div className="mt-20 grid border border-line bg-ink/75 backdrop-blur-md sm:grid-cols-2 lg:mt-20 lg:w-[66%]">
-          {[
-            { title: m.missionTitle, body: m.missionBody, accent: "bg-cyan" },
-            { title: m.visionTitle, body: m.visionBody, accent: "bg-signal" },
-          ].map((block, i) => (
-            <div
-              key={block.title}
-              data-reveal
-              style={{ ["--reveal-delay" as string]: `${150 + i * 120}ms` }}
-              className={`relative p-7 md:p-9 ${i > 0 ? "border-t border-line sm:border-t-0 sm:border-l" : ""}`}
-            >
-              <span aria-hidden className={`absolute top-0 left-0 h-[0.125rem] w-16 ${block.accent}`} />
-              <h3 className="display text-[1.5rem] tracking-[0.02em] md:text-[1.75rem]">{block.title}</h3>
-              <p className="mt-4 text-[1.0625rem] leading-[1.6] text-fg/90 md:text-[1.125rem]">{block.body}</p>
-            </div>
-          ))}
-        </div>
+        {full && (
+          <div className="mt-20 grid border border-line bg-ink/75 backdrop-blur-md sm:grid-cols-2 lg:mt-20 lg:w-[66%]">
+            {[
+              { title: m.missionTitle, body: m.missionBody, accent: "bg-cyan" },
+              { title: m.visionTitle, body: m.visionBody, accent: "bg-signal" },
+            ].map((block, i) => (
+              <div
+                key={block.title}
+                data-reveal
+                style={{ ["--reveal-delay" as string]: `${150 + i * 120}ms` }}
+                className={`relative p-7 md:p-9 ${i > 0 ? "border-t border-line sm:border-t-0 sm:border-l" : ""}`}
+              >
+                <span aria-hidden className={`absolute top-0 left-0 h-[0.125rem] w-16 ${block.accent}`} />
+                <h3 className="display text-[1.5rem] tracking-[0.02em] md:text-[1.75rem]">{block.title}</h3>
+                <p className="mt-4 text-[1.0625rem] leading-[1.6] text-fg/90 md:text-[1.125rem]">{block.body}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
