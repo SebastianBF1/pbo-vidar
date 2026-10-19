@@ -61,6 +61,12 @@ export interface ProductPage {
     tint?: number;
     /** Width (% of the image) of the left fade into the text column; keep small when the craft fills the frame. */
     fade?: number;
+    /**
+     * Show the whole image at its own aspect instead of cropping it into the hero frame — for wide images where a
+     * crop would cut the craft. Desktop: a band `width`% of the viewport wide, vertically centred beside the text.
+     * Phones: full width below the header.
+     */
+    whole?: { width: number };
   };
   /** 4–6 figures for the key-specification strip. */
   keySpecs: SpecKey[];
@@ -277,14 +283,15 @@ export const platforms: Platform[] = [
     cardSpecs: pick(ragnarSpecs, ["length", "maxSpeed", "payload", "rangeCruise"]),
     specs: ragnarSpecs,
     page: {
-      hero: { image: { ...IMAGES.ragnarGraded, position: "50% 58%" }, mobilePosition: "50% 56%", fade: 18 },
+      // Whole vessel in view: the wide image is shown uncropped beside the text.
+      hero: { image: { ...IMAGES.ragnarUnderway, position: "50% 50%" }, mobilePosition: "50% 50%", fade: 12, whole: { width: 60 } },
       keySpecs: ["length", "beam", "payload", "maxSpeed", "rangeCruise", "engines"],
       overview: {
         image: { ...IMAGES.ragnarModules, position: "50% 50%" },
         aspect: 1448 / 1086,
         blocks: [{ id: "build" }],
       },
-      gallery: [[{ id: "wide", image: { ...IMAGES.ragnarPosterWide, position: "50% 50%" } }]],
+      // No gallery: the full-vessel image is the hero.
     },
   },
   {

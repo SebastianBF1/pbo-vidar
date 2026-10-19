@@ -34,6 +34,7 @@ export function ProductHero({
   const { hero } = platform.page;
   const category = (dict.platforms.items[platform.key] as { category: string }).category;
   const long = platform.name.length > 10;
+  const { whole } = hero;
 
   return (
     <section
@@ -41,7 +42,22 @@ export function ProductHero({
       className="relative isolate flex flex-col overflow-hidden"
       style={{ ["--hero-h" as string]: HERO_HEIGHT }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden lg:absolute lg:top-0 lg:right-0 lg:aspect-auto lg:h-[var(--hero-h)] lg:w-[58%]">
+      <div
+        className={
+          whole
+            ? "hero-whole relative mt-16 overflow-hidden md:mt-[4.75rem] lg:absolute lg:top-[var(--whole-top)] lg:right-0 lg:mt-0 lg:w-[var(--whole-w)] lg:-translate-y-1/2"
+            : "relative aspect-[4/3] overflow-hidden lg:absolute lg:top-0 lg:right-0 lg:aspect-auto lg:h-[var(--hero-h)] lg:w-[58%]"
+        }
+        style={
+          whole && {
+            aspectRatio: `${hero.image.width} / ${hero.image.height}`,
+            ["--whole-w" as string]: `${whole.width}%`,
+            // centred in the hero area below the header
+            ["--whole-top" as string]: "calc((var(--hero-h) + 5.75rem) / 2)",
+            ["--fade" as string]: `${hero.fade ?? 20}%`,
+          }
+        }
+      >
         <div
           className="absolute inset-0 scale-[var(--zoom-m)] lg:scale-100"
           style={{
@@ -55,7 +71,7 @@ export function ProductHero({
             fill
             preload
             quality={85}
-            sizes="(min-width: 1024px) 58vw, 100vw"
+            sizes={`(min-width: 1024px) ${whole?.width ?? 58}vw, 100vw`}
             style={{
               ["--pos-m" as string]: hero.mobilePosition,
               ["--pos-d" as string]: hero.image.position,
@@ -69,21 +85,26 @@ export function ProductHero({
           style={{ opacity: hero.tint ?? 0.15 }}
           aria-hidden
         />
-        <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-ink/80 to-transparent" aria-hidden />
-        <div
-          className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink to-transparent lg:h-1/5 lg:from-ink/70"
-          aria-hidden
-        />
-        {/* Soft multi-stop fade into the text column (no hard seam). */}
-        <div
-          className="absolute inset-y-0 left-0 hidden lg:block"
-          style={{
-            width: `${hero.fade ?? 20}%`,
-            background:
-              "linear-gradient(to right, var(--color-ink) 0%, rgb(5 16 25 / 0.82) 22%, rgb(5 16 25 / 0.5) 48%, rgb(5 16 25 / 0.18) 76%, transparent 100%)",
-          }}
-          aria-hidden
-        />
+        {/* whole-image band: its edges fade out through a mask (.hero-whole in globals.css) instead of overlays */}
+        {!whole && (
+          <>
+            <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-ink/80 to-transparent" aria-hidden />
+            <div
+              className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink to-transparent lg:h-1/5 lg:from-ink/70"
+              aria-hidden
+            />
+            {/* Soft multi-stop fade into the text column (no hard seam). */}
+            <div
+              className="absolute inset-y-0 left-0 hidden lg:block"
+              style={{
+                width: `${hero.fade ?? 20}%`,
+                background:
+                  "linear-gradient(to right, var(--color-ink) 0%, rgb(5 16 25 / 0.82) 22%, rgb(5 16 25 / 0.5) 48%, rgb(5 16 25 / 0.18) 76%, transparent 100%)",
+              }}
+              aria-hidden
+            />
+          </>
+        )}
       </div>
 
       <div className="container-x relative z-10 flex flex-1 flex-col pt-5 pb-10 lg:min-h-[var(--hero-h)] lg:justify-center lg:pt-[5.75rem] lg:pb-12">

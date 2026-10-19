@@ -313,7 +313,7 @@
         "Force multiplier",
         "Built for Ukraine"
       ],
-      "heroAlt": "RAGNAR 28 underway on open water",
+      "heroAlt": "RAGNAR 28 underway with open payload cases and a sensor mast",
       "overview": {
         "heading": "Modular design for multiple missions.",
         "chips": [
@@ -331,11 +331,6 @@
               "Inboard diesel engines"
             ]
           }
-        }
-      },
-      "gallery": {
-        "wide": {
-          "alt": "RAGNAR 28 underway, full vessel with payload cases and sensor mast"
         }
       }
     },

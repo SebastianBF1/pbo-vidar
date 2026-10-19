@@ -196,6 +196,27 @@
 .hero-image {
   animation: hero-image 2200ms var(--ease-out-expo) both;
 }
+
+/* Product hero showing the whole image (hero.whole): the band's edges fade out with a mask, so the animated
+   (GPU-composited) image can't show a seam where an overlay meets it on a sub-pixel edge. */
+.hero-whole {
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 80%, transparent 100%);
+}
+@media (min-width: 64rem) {
+  .hero-whole {
+    mask-image:
+      linear-gradient(to bottom, transparent 0%, #000 16%, #000 80%, transparent 100%),
+      linear-gradient(
+        to right,
+        transparent 0%,
+        rgb(0 0 0 / 0.18) calc(var(--fade) * 0.22),
+        rgb(0 0 0 / 0.5) calc(var(--fade) * 0.48),
+        rgb(0 0 0 / 0.82) calc(var(--fade) * 0.76),
+        #000 var(--fade)
+      );
+    mask-composite: intersect;
+  }
+}
 .rise {
   animation: rise 1100ms var(--ease-out-expo) both;
   animation-delay: var(--d, 0ms);
