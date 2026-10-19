@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { I18nNotice } from "@/components/I18nNotice";
 import { MissionSection } from "@/components/MissionSection";
+import { OpportunitiesSection } from "@/components/OpportunitiesSection";
 import { PlatformsSection } from "@/components/PlatformsSection";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
@@ -31,6 +32,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <TechnologySection dict={dict} />
         <FieldOperationsSection dict={dict} />
         <DevelopmentSection dict={dict} />
+        <OpportunitiesSection dict={dict} />
         <MissionSection dict={dict} />
       </main>
       <Footer dict={dict} locale={locale} />

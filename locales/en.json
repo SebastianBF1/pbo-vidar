@@ -205,6 +205,16 @@
       "Practical testing in demanding conditions"
     ]
   },
+  "opportunities": {
+    "label": "Collaboration & development",
+    "title": "Open for opportunities.",
+    "intro": "Have a maritime challenge, a technical requirement or an idea for a new solution?",
+    "body": "We welcome conversations about potential partnerships, custom integrations and future maritime technology development.",
+    "cta": "Start a conversation",
+    "ctaHint": "opens a prepared email in your email app",
+    "imageAlt": "PIRANHA deck with an equipment case and antennas",
+    "productLink": "Explore collaboration opportunities"
+  },
   "mission": {
     "label": "Impact",
     "statement": [

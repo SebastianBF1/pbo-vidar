@@ -14,3 +14,23 @@ export const COMPANY = {
 } as const;
 
 export type SocialId = (typeof COMPANY.social)[number]["id"];
+
+/** Prepared email behind “Start a conversation” — English on both language versions; the visitor edits and sends it. */
+export const COLLABORATION_MAIL = {
+  subject: "Collaboration Opportunity – PBO VIDAR",
+  body: [
+    "Hello PBO VIDAR team,",
+    "",
+    "I would like to explore a potential collaboration opportunity with PBO VIDAR.",
+    "",
+    "Here is a brief description of my idea or requirements:",
+    "",
+    "[Your message]",
+    "",
+    "Best regards,",
+  ].join("\r\n"), // RFC 6068: line breaks in a mailto body are CRLF (%0D%0A)
+};
+
+export const COLLABORATION_MAILTO = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
+  COLLABORATION_MAIL.subject,
+)}&body=${encodeURIComponent(COLLABORATION_MAIL.body)}`;

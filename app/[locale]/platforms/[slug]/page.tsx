@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
 import { OtherPlatforms } from "@/components/product/OtherPlatforms";
+import { CollaborationLink } from "@/components/product/CollaborationLink";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductHero } from "@/components/product/ProductHero";
 import { ProductOverview } from "@/components/product/ProductOverview";
@@ -83,6 +84,7 @@ async function PlatformContent({ params }: { params: PageProps<"/[locale]/platfo
         ) : (
           <MuninPage platform={platform} dict={dict} locale={locale} />
         )}
+        <CollaborationLink locale={locale} label={dict.opportunities.productLink} />
         <OtherPlatforms current={platform} dict={dict} locale={locale} />
       </main>
       <Footer dict={dict} locale={locale} />

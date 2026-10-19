@@ -68,6 +68,23 @@ export const ArrowRight = ({ className = "" }: { className?: string }) => (
     →
   </span>
 );
+/** ↗ drawn as SVG: the text glyph falls back to a thin system font and reads smaller than →. */
+export const ArrowUpRight = ({ className = "" }: { className?: string }) => (
+  <span aria-hidden className={`arrow ${className}`}>
+    <svg
+      viewBox="0 0 16 16"
+      width="1.3em"
+      height="1.3em"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.3}
+      strokeLinecap="square"
+      className="block"
+    >
+      <path d="M4.5 11.5 11.5 4.5M5.75 4.5h5.75v5.75" />
+    </svg>
+  </span>
+);
 export const IconRange = (p: SVGProps<SVGSVGElement>) => (
   <svg {...base(p)}>
     <circle cx="6" cy="17.5" r="2" />
