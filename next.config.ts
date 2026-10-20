@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
   env: {
     // Read by lib/asset.ts for paths Next does not prefix itself (next/image src, full-page navigations).
     NEXT_PUBLIC_BASE_PATH: pagesBasePath ?? "",
+    // Absolute URLs for canonical / hreflang links (search engines require fully qualified URLs).
+    NEXT_PUBLIC_SITE_ORIGIN: isPages ? (process.env.PAGES_ORIGIN ?? "https://sebastianbf1.github.io") : "http://localhost:3000",
   },
   images: isPages ? { unoptimized: true } : { qualities: [75, 85] },
   ...(isPages

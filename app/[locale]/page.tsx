@@ -3,7 +3,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { FieldOperationsSection } from "@/components/FieldOperationsSection";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
+import { CompanyHero } from "@/components/CompanyHero";
 import { I18nNotice } from "@/components/I18nNotice";
 import { MissionSection } from "@/components/MissionSection";
 import { OpportunitiesSection } from "@/components/OpportunitiesSection";
@@ -24,7 +24,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </a>
       <Header locale={locale} nav={dict.nav} tagline={dict.footer.tagline} />
       <main id="main">
-        <Hero dict={dict} locale={locale} />
+        {/* Company hero; the PIRANHA hero (components/Hero.tsx) and its figures live on in the PIRANHA product page */}
+        <CompanyHero dict={dict} locale={locale} />
         <PlatformsSection dict={dict} locale={locale} />
         {/* Short introduction; the pillars and mission / vision are on the About page */}
         <AboutSection dict={dict} locale={locale} variant="intro" />

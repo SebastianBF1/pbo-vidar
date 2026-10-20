@@ -31,6 +31,25 @@ export const COLLABORATION_MAIL = {
   ].join("\r\n"), // RFC 6068: line breaks in a mailto body are CRLF (%0D%0A)
 };
 
-export const COLLABORATION_MAILTO = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
-  COLLABORATION_MAIL.subject,
-)}&body=${encodeURIComponent(COLLABORATION_MAIL.body)}`;
+const mailto = (subject: string, body: string) =>
+  `mailto:${COMPANY.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+export const COLLABORATION_MAILTO = mailto(COLLABORATION_MAIL.subject, COLLABORATION_MAIL.body);
+
+/** “Discuss this platform” on a product page: short neutral draft, English on both language versions. */
+export function productEnquiryMail(productName: string) {
+  const name = productName.replace(/[“”"]/g, ""); // PBO 4 “MUNIN” → PBO 4 MUNIN
+  const subject = `${name} – Product Enquiry`;
+  const body = [
+    "Hello PBO VIDAR team,",
+    "",
+    `I would like to learn more about ${name}.`,
+    "",
+    "My questions:",
+    "",
+    "[Your questions]",
+    "",
+    "Best regards,",
+  ].join("\r\n");
+  return { subject, body, href: mailto(subject, body) };
+}

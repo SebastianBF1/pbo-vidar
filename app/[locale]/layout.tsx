@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Script from "next/script";
 import { Fira_Sans_Condensed, IBM_Plex_Mono, Inter } from "next/font/google";
 import { asset } from "@/lib/asset";
+import { alternatesFor, metadataBase } from "@/lib/seo";
 import { getDictionary, hasLocale, htmlLang, locales } from "@/lib/i18n";
 import "../globals.css";
 
@@ -39,7 +40,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[locale]">): Pr
     title: dict.meta.title,
     description: dict.meta.description,
     icons: { icon: asset("/icon.png") },
-    alternates: { languages: { en: asset("/en/"), uk: asset("/ua/") } },
+    metadataBase,
+    alternates: alternatesFor(locale, "/"),
   };
 }
 

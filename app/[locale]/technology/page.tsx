@@ -7,7 +7,7 @@ import { PageLinks } from "@/components/PageLinks";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
 import { TechnologySection } from "@/components/TechnologySection";
-import { asset } from "@/lib/asset";
+import { alternatesFor } from "@/lib/seo";
 import { fill } from "@/lib/format";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/technolo
   return {
     title: fill(dict.productPage.metaTitle, { name: dict.technologyPage.title }),
     description: dict.meta.description,
-    alternates: { languages: { en: asset("/en/technology/"), uk: asset("/ua/technology/") } },
+    alternates: alternatesFor(locale, "/technology/"),
   };
 }
 

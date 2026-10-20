@@ -7,7 +7,7 @@ import { MissionSection } from "@/components/MissionSection";
 import { PageLinks } from "@/components/PageLinks";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
-import { asset } from "@/lib/asset";
+import { alternatesFor } from "@/lib/seo";
 import { fill } from "@/lib/format";
 import { getDictionary, hasLocale } from "@/lib/i18n";
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/about">)
   return {
     title: fill(dict.productPage.metaTitle, { name: dict.about.title }),
     description: dict.meta.description,
-    alternates: { languages: { en: asset("/en/about/"), uk: asset("/ua/about/") } },
+    alternates: alternatesFor(locale, "/about/"),
   };
 }
 

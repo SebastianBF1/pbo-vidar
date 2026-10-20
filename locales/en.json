@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "PBO VIDAR — Maritime Solutions for a Safer Tomorrow",
-    "description": "PBO Vidar is a Ukrainian-Norwegian maritime technology company focused on unmanned surface platforms, rapid system integration and mission-driven engineering."
+    "description": "PBO VIDAR is a Ukrainian engineering company developing and producing unmanned surface vessels (USV) for defence, security and critical infrastructure protection."
   },
   "nav": {
     "about": "About",
@@ -14,6 +14,15 @@
     "language": "Language",
     "home": "PBO VIDAR — home",
     "skip": "Skip to content"
+  },
+  "companyHero": {
+    "title": [
+      "Autonomy",
+      "for a safer",
+      "tomorrow"
+    ],
+    "body": "PBO VIDAR develops unmanned surface platforms that protect lives, secure critical infrastructure and contribute to a more stable and peaceful Ukraine.",
+    "imageAlt": "PBO 4 “MUNIN” low in the water on a river at sunset, with a bridge and city skyline beyond"
   },
   "hero": {
     "eyebrow": [
@@ -144,7 +153,7 @@
     "label": "About PBO Vidar",
     "title": "About PBO Vidar",
     "body": [
-      "PBO Vidar is a Ukrainian-Norwegian maritime technology company focused on unmanned surface platforms, rapid system integration and mission-driven engineering.",
+      "PBO VIDAR is a Ukrainian engineering company developing and producing unmanned surface vessels (USV) for defence, security and critical infrastructure protection.",
       "We combine Scandinavian platform expertise with Ukrainian development, testing and operational insight."
     ],
     "cta": "Learn more",
@@ -269,7 +278,8 @@
     "galleryLabel": "Imagery",
     "exploreLabel": "Our platforms",
     "exploreTitle": "Other platforms",
-    "metaTitle": "{name} — PBO VIDAR"
+    "metaTitle": "{name} — PBO VIDAR",
+    "discuss": "Discuss this platform"
   },
   "products": {
     "piranha": {

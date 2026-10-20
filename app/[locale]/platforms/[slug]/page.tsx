@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
 import { OtherPlatforms } from "@/components/product/OtherPlatforms";
-import { CollaborationLink } from "@/components/product/CollaborationLink";
+import { ProductEnquiry } from "@/components/product/ProductEnquiry";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductHero } from "@/components/product/ProductHero";
 import { ProductOverview } from "@/components/product/ProductOverview";
@@ -14,7 +14,7 @@ import { ProductSpecs } from "@/components/product/ProductSpecs";
 import { getPlatform, isStandard, keySpecsOf, platforms, publicSpecs } from "@/data/platforms";
 import { MuninPage } from "@/components/munin/MuninPage";
 import { displaySpecs, fill } from "@/lib/format";
-import { asset } from "@/lib/asset";
+import { alternatesFor } from "@/lib/seo";
 import { getDictionary, hasLocale, locales } from "@/lib/i18n";
 import { productCopy } from "@/lib/product-copy";
 
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/platform
   return {
     title: fill(dict.productPage.metaTitle, { name: platform.name }),
     description: `${category}. ${productCopy(dict, platform.key).description}`,
-    alternates: { languages: { en: asset(`/en/platforms/${slug}/`), uk: asset(`/ua/platforms/${slug}/`) } },
+    alternates: alternatesFor(locale, `/platforms/${slug}/`),
   };
 }
 
@@ -84,7 +84,12 @@ async function PlatformContent({ params }: { params: PageProps<"/[locale]/platfo
         ) : (
           <MuninPage platform={platform} dict={dict} locale={locale} />
         )}
-        <CollaborationLink locale={locale} label={dict.opportunities.productLink} />
+        <ProductEnquiry
+          productName={platform.name}
+          locale={locale}
+          label={dict.productPage.discuss}
+          collaborationLabel={dict.opportunities.productLink}
+        />
         <OtherPlatforms current={platform} dict={dict} locale={locale} />
       </main>
       <Footer dict={dict} locale={locale} />

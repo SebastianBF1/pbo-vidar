@@ -2,8 +2,8 @@
 export type NavId = "about" | "platforms" | "technology" | "impact" | "contact";
 
 export const HEADER_NAV: readonly NavId[] = ["about", "platforms", "technology", "contact"];
-/** The footer keeps its existing list; only the destinations follow the new structure. */
-export const FOOTER_NAV: readonly NavId[] = ["about", "platforms", "technology", "impact", "contact"];
+/** Same structure everywhere: the footer repeats the header navigation. */
+export const FOOTER_NAV: readonly NavId[] = HEADER_NAV;
 
 export function navHref(id: NavId, locale: string): string {
   switch (id) {
