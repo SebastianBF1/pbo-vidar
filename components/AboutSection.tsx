@@ -29,7 +29,7 @@ export function AboutSection({
       aria-labelledby="about-title"
       className={`relative isolate overflow-hidden bg-ink-2 ${full ? "" : "border-t border-line"}`}
     >
-      {/* Side visual: supplied MUNIN field photograph, graded dark navy */}
+      {/* Side visual: supplied MUNIN image (already graded dark navy, so no extra filter or tint) */}
       <div className="absolute inset-0 -z-10 hidden lg:left-[32%] lg:block">
         <Image
           src={IMAGES.aboutMunin.src}
@@ -37,12 +37,10 @@ export function AboutSection({
           fill
           quality={85}
           sizes="(min-width: 1024px) 62vw, 100vw"
-          className="object-cover object-[78%_40%] contrast-[1.12] saturate-[0.3]"
+          className="object-cover object-[78%_50%]"
         />
-        <div className="absolute inset-0 bg-[#0b3a5a] opacity-50 mix-blend-color" aria-hidden />
-        <div className="absolute inset-0 bg-ink-2/20" aria-hidden />
         <div className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-2 via-ink-2/70 to-transparent lg:block" aria-hidden />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-2 via-ink-2/60 to-transparent" aria-hidden />
+        <div className="absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-ink-2 to-transparent" aria-hidden />
         <div className="absolute inset-x-0 top-0 h-1/5 bg-gradient-to-b from-ink-2/70 to-transparent" aria-hidden />
       </div>
 
@@ -82,10 +80,9 @@ export function AboutSection({
               fill
               quality={85}
               sizes="100vw"
-              className="object-cover object-[70%_45%] grayscale contrast-[1.15] brightness-[0.9]"
+              className="object-cover object-[62%_60%]"
             />
-            <div className="absolute inset-0 bg-[#0b3a5a] opacity-55 mix-blend-color" aria-hidden />
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-2/90 to-transparent" aria-hidden />
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-2/90 to-transparent" aria-hidden />
           </div>
           <figcaption className="label absolute bottom-0 left-0 px-4 py-3 text-fg/75">{a.imageCaption}</figcaption>
         </figure>
