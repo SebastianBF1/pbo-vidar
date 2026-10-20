@@ -38,12 +38,6 @@ export interface MuninCopy {
       "title" | "speed" | "range" | "payload" | "electric" | "electricSub" | "control" | "controlSub" | "waters",
       string
     >;
-    missions: {
-      title: string;
-      actionAlt: string;
-      surveillance: { title: string; body: string };
-      special: { title: string; body: string };
-    };
     environments: Record<"title" | "rivers" | "lakes" | "coastal" | "offshore", string>;
   };
 }

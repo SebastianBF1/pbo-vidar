@@ -3,7 +3,7 @@
  * Specification values come from data/platforms.ts; words from locales products.munin.page.
  */
 import { IMAGES, type SiteImage } from "./images";
-import type { SpecKey, SpecStatus } from "./platforms";
+import type { SpecKey } from "./platforms";
 
 export type MuninViewId = "front" | "side" | "rear";
 
@@ -27,12 +27,6 @@ export interface MuninFeature {
   spec?: SpecKey;
 }
 
-export interface MuninMission {
-  id: "surveillance" | "special";
-  image: SiteImage;
-  status?: SpecStatus;
-}
-
 export const MUNIN_PAGE = {
   hero: IMAGES.muninHeroWide,
   views: [
@@ -50,12 +44,6 @@ export const MUNIN_PAGE = {
     { id: "control" },
     { id: "waters" },
   ] satisfies MuninFeature[],
-  action: IMAGES.muninAction,
-  // Brochure mission list: “Surveillance”, “Special missions” (no further claims).
-  missions: [
-    { id: "surveillance", image: IMAGES.muninMissionSurveillance, status: "optional" },
-    { id: "special", image: IMAGES.muninMissionSpecial, status: "optional" },
-  ] satisfies MuninMission[],
   // Brochure operating area: rivers, lakes, coastal waters, offshore.
   environments: [
     { id: "rivers", image: IMAGES.muninEnvRivers },

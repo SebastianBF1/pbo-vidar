@@ -406,18 +406,6 @@
           "controlSub": "Optional remote control",
           "waters": "Rivers, coastal & offshore operations"
         },
-        "missions": {
-          "title": "Mission profiles",
-          "actionAlt": "Illustration of PBO 4 MUNIN at speed on open water",
-          "surveillance": {
-            "title": "Surveillance",
-            "body": "Optional cameras, communication systems and sensors."
-          },
-          "special": {
-            "title": "Special missions",
-            "body": "Payload {payload}, with optional payload modules."
-          }
-        },
         "environments": {
           "title": "Operational environments",
           "rivers": "Rivers",

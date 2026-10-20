@@ -5,7 +5,6 @@ import { muninCopy } from "@/lib/product-copy";
 import { MuninEnvironments } from "./MuninEnvironments";
 import { MuninHero } from "./MuninHero";
 import { MuninKeySpecs } from "./MuninKeySpecs";
-import { MuninMissions } from "./MuninMissions";
 import { MuninOverview } from "./MuninOverview";
 import { MuninTechnical } from "./MuninTechnical";
 
@@ -28,7 +27,6 @@ export function MuninPage({ platform, dict, locale }: { platform: Platform; dict
       <MuninKeySpecs title={copy.page.keySpecs} specs={keySpecs} />
       <MuninTechnical copy={copy} dict={dict} specs={table} />
       <MuninOverview copy={copy} dict={dict} specs={display} />
-      <MuninMissions copy={copy} dict={dict} specs={display} />
       <MuninEnvironments copy={copy} />
     </div>
   );
