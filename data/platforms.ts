@@ -279,7 +279,7 @@ export const platforms: Platform[] = [
     slug: "ragnar-28",
     key: "ragnar28",
     name: "RAGNAR 28",
-    image: { ...IMAGES.ragnarGraded, position: "50% 56%" },
+    image: { ...IMAGES.ragnarUnderway, position: "40% 50%" },
     cardSpecs: pick(ragnarSpecs, ["length", "maxSpeed", "payload", "rangeCruise"]),
     specs: ragnarSpecs,
     page: {

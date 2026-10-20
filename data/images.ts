@@ -21,7 +21,6 @@ export const IMAGES = {
   piranhaUsv: { src: asset("/images/piranha-deck.webp"), width: 885, height: 1109 },
   piranhaHull: { src: asset("/images/piranha-standing.webp"), width: 731, height: 1098 },
   // ---------------------------------------------------------------- RAGNAR 28
-  ragnarGraded: { src: asset("/images/ragnar-28-graded.jpg"), width: 1024, height: 1024 },
   ragnarModules: { src: asset("/images/ragnar-28-deck.webp"), width: 1448, height: 1086 },
   ragnarUnderway: { src: asset("/images/ragnar-28-underway.webp"), width: 1916, height: 821 },
   // ---------------------------------------------------------------- PBO 4 "MUNIN"
