@@ -163,6 +163,18 @@
   opacity: 1;
   transform: none;
 }
+/* Phone carousels: cards revealed one by one rose 18px while being swiped in. Show them in place, and keep the
+   strip horizontal-only (the page still scrolls vertically: pan-y is allowed). */
+@media (max-width: 47.99rem) {
+  .carousel-x {
+    touch-action: pan-x pan-y;
+  }
+  .js .carousel-x > [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* Thin line draw */
 .js [data-line] {

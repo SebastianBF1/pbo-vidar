@@ -35,7 +35,7 @@ export function PlatformsSection({ dict, locale }: { dict: Dictionary; locale: L
 
         <div data-line className="mt-8 h-px bg-line md:mt-10" aria-hidden />
 
-        <ul className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 xl:grid-cols-4 xl:gap-5">
+        <ul className="carousel-x no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-px-5 px-5 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 xl:grid-cols-4 xl:gap-5">
           {platforms.map((platform, i) => {
             const item = p.items[platform.key] as { category: string; imageAlt: string; note?: string };
             return (
