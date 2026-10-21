@@ -45,8 +45,8 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
             id="hero-title"
             className={`rise display mt-4 leading-[0.9] md:mt-5 lg:mt-0 ${
               long
-                ? "text-[clamp(2.125rem,9.2vw,3rem)] lg:text-[clamp(3.5rem,5.1vw,4.6rem)]"
-                : "text-[clamp(2.875rem,12.5vw,4.5rem)] lg:text-[clamp(4.75rem,6.6vw,7.25rem)]"
+                ? "text-[clamp(1.95rem,8.4vw,2.625rem)] md:text-[2.75rem] lg:text-[clamp(2.75rem,3.95vw,3.6rem)]"
+                : "text-[clamp(2.625rem,11.2vw,3.75rem)] md:text-[3.75rem] lg:text-[clamp(3.75rem,5.15vw,5.6rem)]"
             }`}
             style={{ ["--d" as string]: "250ms" }}
           >
@@ -59,7 +59,7 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
           </h1>
 
           <p
-            className="rise mt-4 max-w-[38ch] text-[1.0625rem] leading-relaxed text-fg/85 md:mt-6 md:text-[1.1875rem] lg:mt-8"
+            className="rise mt-4 max-w-[38ch] text-[0.9688rem] leading-relaxed text-fg/85 md:mt-5 md:text-[1.0625rem] lg:mt-6"
             style={{ ["--d" as string]: "380ms" }}
           >
             {h.body}
