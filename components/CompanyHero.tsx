@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ENQUIRY_MAILTO } from "@/data/company";
 import { IMAGES } from "@/data/images";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { ArrowRight } from "./Icons";
@@ -40,18 +41,9 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
 
       <div className="container-x relative z-10 flex flex-1 flex-col pt-0 pb-10 md:pt-2 md:pb-14 lg:justify-center lg:pt-[7rem] lg:pb-16">
         <div className="max-w-[40rem]">
-          <p className="rise label flex items-start gap-3 text-fg/75" style={{ ["--d" as string]: "150ms" }}>
-            <span className="mt-[0.3125rem] h-px w-8 bg-signal" aria-hidden />
-            <span>
-              {dict.hero.eyebrow[0]}
-              <br />
-              {dict.hero.eyebrow[1]}
-            </span>
-          </p>
-
           <h1
             id="hero-title"
-            className={`rise display mt-4 leading-[0.9] md:mt-5 lg:mt-7 ${
+            className={`rise display mt-4 leading-[0.9] md:mt-5 lg:mt-0 ${
               long
                 ? "text-[clamp(2.125rem,9.2vw,3rem)] lg:text-[clamp(3.5rem,5.1vw,4.6rem)]"
                 : "text-[clamp(2.875rem,12.5vw,4.5rem)] lg:text-[clamp(4.75rem,6.6vw,7.25rem)]"
@@ -73,19 +65,14 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
             {h.body}
           </p>
 
-          <div className="rise mt-6 flex flex-col gap-3 sm:flex-row md:mt-8 lg:mt-10" style={{ ["--d" as string]: "500ms" }}>
-            <Link
-              href={`/${locale}#platforms`}
-              className="arrow-link inline-flex h-[3.25rem] items-center justify-between gap-6 bg-signal px-6 font-mono text-[0.75rem] font-medium uppercase tracking-[0.2em] text-ink transition-colors duration-300 hover:bg-[#ffe03a] sm:justify-start"
-            >
-              {dict.hero.ctaSecondary}
+          {/* blue above yellow, as in the Ukrainian flag */}
+          <div className="rise mt-6 flex flex-col gap-2 md:mt-8 lg:mt-10" style={{ ["--d" as string]: "500ms" }}>
+            <a href={ENQUIRY_MAILTO} className="arrow-link inline-flex h-[3.25rem] w-full items-center justify-between gap-6 px-6 font-mono text-[0.75rem] font-medium uppercase tracking-[0.2em] transition-colors duration-300 sm:w-[18.5rem] bg-[#1d63ed] text-white hover:bg-[#3a78f2]">
+              {h.ctaContact}
               <ArrowRight />
-            </Link>
-            <Link
-              href={`/${locale}/about`}
-              className="arrow-link inline-flex h-[3.25rem] items-center justify-between gap-6 border border-white/25 px-6 font-mono text-[0.75rem] uppercase tracking-[0.2em] text-fg transition-colors duration-300 hover:border-cyan hover:text-cyan sm:justify-start"
-            >
-              {dict.about.title}
+            </a>
+            <Link href={`/${locale}#platforms`} className="arrow-link inline-flex h-[3.25rem] w-full items-center justify-between gap-6 px-6 font-mono text-[0.75rem] font-medium uppercase tracking-[0.2em] transition-colors duration-300 sm:w-[18.5rem] bg-signal text-ink hover:bg-[#ffe03a]">
+              {dict.hero.ctaSecondary}
               <ArrowRight />
             </Link>
           </div>

@@ -36,6 +36,22 @@ const mailto = (subject: string, body: string) =>
 
 export const COLLABORATION_MAILTO = mailto(COLLABORATION_MAIL.subject, COLLABORATION_MAIL.body);
 
+/** “Get in contact” in the homepage hero — English on both language versions. */
+export const ENQUIRY_MAILTO = mailto(
+  "Enquiry – PBO VIDAR",
+  [
+    "Hello PBO VIDAR team,",
+    "",
+    "I would like to get in touch regarding your maritime technology and solutions.",
+    "",
+    "My enquiry:",
+    "",
+    "[Write your message here]",
+    "",
+    "Best regards,",
+  ].join("\r\n"),
+);
+
 /** “Discuss this platform” on a product page: short neutral draft, English on both language versions. */
 export function productEnquiryMail(productName: string) {
   const name = productName.replace(/[“”"]/g, ""); // PBO 4 “MUNIN” → PBO 4 MUNIN
