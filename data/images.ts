@@ -25,7 +25,7 @@ export const IMAGES = {
   ragnarUnderway: { src: asset("/images/ragnar-28-underway.webp"), width: 1916, height: 821 },
   // ---------------------------------------------------------------- PBO 4 "MUNIN"
   muninCard: { src: asset("/images/munin-water.jpg"), width: 414, height: 442 },
-  aboutMunin: { src: asset("/images/munin-about.webp"), width: 1849, height: 847 },
+  aboutMunin: { src: asset("/images/munin-about-v2.webp"), width: 2000, height: 770 },
   muninHeroWide: { src: asset("/images/munin-hero-wide.jpg"), width: 2048, height: 682 },
   muninFront: { src: asset("/images/munin-front.jpg"), width: 394, height: 250 },
   muninTechSide: { src: asset("/images/munin-tech-side.jpg"), width: 1370, height: 685 },

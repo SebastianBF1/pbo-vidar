@@ -37,7 +37,7 @@ export function AboutSection({
           fill
           quality={85}
           sizes="(min-width: 1024px) 62vw, 100vw"
-          className="object-cover object-[78%_50%]"
+          className="object-cover object-[96%_50%]"
         />
         <div className="absolute inset-y-0 left-0 hidden w-1/2 bg-gradient-to-r from-ink-2 via-ink-2/70 to-transparent lg:block" aria-hidden />
         <div className="absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-ink-2 to-transparent" aria-hidden />
@@ -80,7 +80,7 @@ export function AboutSection({
               fill
               quality={85}
               sizes="100vw"
-              className="object-cover object-[62%_60%]"
+              className="object-cover object-[92%_50%]"
             />
             <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-2/90 to-transparent" aria-hidden />
           </div>
