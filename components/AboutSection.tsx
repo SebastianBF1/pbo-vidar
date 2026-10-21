@@ -45,8 +45,8 @@ export function AboutSection({
       </div>
 
       <div
-        className={`container-x grid gap-14 pb-20 md:pb-28 lg:min-h-[45rem] lg:grid-cols-12 lg:gap-10 ${
-          full ? "pt-32 md:pt-40 lg:pt-44" : "pt-20 md:pt-28"
+        className={`container-x grid gap-14 pb-20 max-md:gap-8 max-md:pb-14 md:pb-28 lg:min-h-[45rem] lg:grid-cols-12 lg:gap-10 ${
+          full ? "pt-32 md:pt-40 lg:pt-44" : "pt-20 max-md:pt-14 md:pt-28"
         }`}
       >
         <div className="flex flex-col lg:col-span-5" data-reveal>
@@ -54,17 +54,22 @@ export function AboutSection({
             <span className="h-1.5 w-1.5 bg-signal" aria-hidden />
             {dict.nav.about}
           </p>
-          <Heading id="about-title" className="display mt-5 text-[2.75rem] md:text-[3.75rem] xl:text-[4rem]">
+          <Heading
+            id="about-title"
+            className="display mt-5 text-[2.75rem] max-md:mt-3 max-md:text-[2.125rem] max-md:tracking-[-0.005em] md:text-[3.75rem] xl:text-[4rem]"
+          >
             {a.title}
           </Heading>
-          <div className="mt-8 space-y-5 border-l border-white/15 pl-6">
-            <p className="text-[1.1875rem] leading-[1.55] text-fg md:text-[1.3125rem]">{a.body[0]}</p>
-            {full && <p className="text-[1rem] leading-[1.65] text-muted md:text-[1.0625rem]">{a.body[1]}</p>}
+          {/* phones: a short yellow rule replaces the long side border */}
+          <div className="mt-8 space-y-5 border-l border-white/15 pl-6 max-md:mt-5 max-md:space-y-3 max-md:border-l-0 max-md:pl-0">
+            <span className="block h-px w-10 bg-signal md:hidden" aria-hidden />
+            <p className="text-[1.1875rem] leading-[1.55] text-fg max-md:text-[1rem] max-md:leading-[1.5] md:text-[1.3125rem]">{a.body[0]}</p>
+            {full && <p className="text-[1rem] leading-[1.65] text-muted max-md:text-[0.9375rem] max-md:leading-[1.55] md:text-[1.0625rem]">{a.body[1]}</p>}
           </div>
           <Link
             // homepage → About page; About page → Technology page (the former #technology section)
             href={full ? `/${locale}/technology` : `/${locale}/about`}
-            className="arrow-link mt-10 inline-flex h-[3.25rem] items-center gap-6 self-start border border-white/25 bg-ink-2/40 px-6 font-mono text-[0.75rem] uppercase tracking-[0.2em] backdrop-blur-sm transition-colors duration-300 hover:border-cyan hover:text-cyan"
+            className="arrow-link mt-10 inline-flex h-[3.25rem] items-center gap-6 self-start border border-white/25 bg-ink-2/40 px-6 font-mono text-[0.75rem] uppercase tracking-[0.2em] backdrop-blur-sm transition-colors duration-300 hover:border-cyan hover:text-cyan max-md:mt-6 max-md:h-11 max-md:gap-4 max-md:border-white/20 max-md:px-5 max-md:text-[0.6875rem] max-md:tracking-[0.22em]"
           >
             {a.cta}
             <ArrowRight />
@@ -72,8 +77,9 @@ export function AboutSection({
         </div>
 
         {/* Mobile/tablet: the same photograph as a framed visual */}
-        <figure className="ticks relative -mt-2 overflow-hidden border border-line lg:hidden" data-reveal>
-          <div className="relative aspect-[4/3]">
+        <figure className="ticks relative -mt-2 overflow-hidden border border-line max-md:mt-0 max-md:border-0 lg:hidden" data-reveal>
+          <span className="absolute top-0 left-0 z-10 h-[0.125rem] w-12 bg-signal md:hidden" aria-hidden />
+          <div className="relative aspect-[4/3] max-md:aspect-[16/10]">
             <Image
               src={IMAGES.aboutMunin.src}
               alt=""
@@ -82,9 +88,9 @@ export function AboutSection({
               sizes="100vw"
               className="object-cover object-[92%_50%]"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-2/90 to-transparent" aria-hidden />
+            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink-2/90 to-transparent max-md:h-1/2 max-md:via-ink-2/40" aria-hidden />
           </div>
-          <figcaption className="label absolute bottom-0 left-0 px-4 py-3 text-fg/75">{a.imageCaption}</figcaption>
+          <figcaption className="label absolute bottom-0 left-0 px-4 py-3 text-fg/75 max-md:px-3 max-md:py-2 max-md:text-[0.625rem] max-md:tracking-[0.16em] max-md:whitespace-nowrap max-md:text-fg/85">{a.imageCaption}</figcaption>
         </figure>
 
         <div className="flex flex-col lg:col-span-6 lg:col-start-7">
