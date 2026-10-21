@@ -12,7 +12,7 @@ export interface SiteImage {
 export const IMAGES = {
   logoMark: { src: asset("/images/pbo-mark.png"), width: 563, height: 511 },
   // ---------------------------------------------------------------- Company homepage hero
-  heroCompany: { src: asset("/images/hero-munin-river.webp"), width: 1040, height: 868 },
+  heroCompany: { src: asset("/images/hero-kyiv-dnipro.webp"), width: 1643, height: 957 },
   // ---------------------------------------------------------------- PIRANHA
   homeHeroPiranha: { src: asset("/images/piranha-hero-illustration.webp"), width: 1672, height: 941 },
   heroPiranha: { src: asset("/images/piranha-studio.jpg"), width: 2048, height: 1242 },

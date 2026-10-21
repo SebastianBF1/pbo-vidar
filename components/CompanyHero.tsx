@@ -24,7 +24,7 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
           preload
           quality={85}
           sizes="(min-width: 1024px) 66vw, 100vw"
-          className="hero-image object-cover object-[50%_76%] md:object-[50%_70%] lg:object-[60%_50%]"
+          className="hero-image object-cover object-[50%_50%] lg:object-[70%_50%]"
         />
         <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-ink to-transparent lg:h-32 lg:from-ink/80" aria-hidden />
         <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-ink to-transparent lg:h-1/5 lg:from-ink/70" aria-hidden />
