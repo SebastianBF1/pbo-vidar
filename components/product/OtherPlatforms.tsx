@@ -37,7 +37,7 @@ export function OtherPlatforms({ current, dict, locale }: { current: Platform; d
 
         <ul className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0">
           {others.map((platform, i) => {
-            const item = dict.platforms.items[platform.key];
+            const item: { category: string; imageAlt: string; cardCategory?: string; cardDescription?: string } = dict.platforms.items[platform.key];
             return (
               <li
                 key={platform.slug}
@@ -49,9 +49,9 @@ export function OtherPlatforms({ current, dict, locale }: { current: Platform; d
                   platform={platform}
                   index={platforms.indexOf(platform)}
                   locale={locale}
-                  category={item.category}
+                  category={item.cardCategory ?? item.category}
                   imageAlt={item.imageAlt}
-                  description={dict.products[platform.key].description}
+                  description={item.cardDescription ?? dict.products[platform.key].description}
                   cta={dict.platforms.viewDetails}
                 />
               </li>

@@ -60,11 +60,14 @@
     "items": {
       "piranha": {
         "category": "High-speed electric unmanned surface vehicle",
-        "imageAlt": "PIRANHA at the water’s edge in field configuration"
+        "imageAlt": "PIRANHA at the water’s edge in field configuration",
+        "cardDescription": "Scandinavian design. Ukrainian engineering. Built for stealth."
       },
       "ragnar28": {
         "category": "Unmanned surface vehicle (USV)",
-        "imageAlt": "RAGNAR 28 underway with open payload cases and a sensor mast"
+        "imageAlt": "RAGNAR 28 underway with open payload cases and a sensor mast",
+        "cardCategory": "Manned or unmanned.",
+        "cardDescription": "Designed for your most complex missions."
       },
       "munin": {
         "category": "Unmanned surface vessel",
