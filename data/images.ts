@@ -21,7 +21,7 @@ export const IMAGES = {
   piranhaUsv: { src: asset("/images/piranha-deck.webp"), width: 885, height: 1109 },
   piranhaHull: { src: asset("/images/piranha-standing.webp"), width: 731, height: 1098 },
   // ---------------------------------------------------------------- RAGNAR 28
-  ragnarModules: { src: asset("/images/ragnar-28-manned.png"), width: 395, height: 377 },
+  ragnarModules: { src: asset("/images/ragnar-28-crewed.webp"), width: 1774, height: 887 },
   ragnarUnderway: { src: asset("/images/ragnar-28-underway.webp"), width: 1916, height: 821 },
   // ---------------------------------------------------------------- PBO 4 "MUNIN"
   muninCard: { src: asset("/images/munin-water.jpg"), width: 414, height: 442 },

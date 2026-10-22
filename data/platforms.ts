@@ -119,10 +119,9 @@ export const platforms: Platform[] = [
       // Whole vessel in view: the wide image is shown uncropped beside the text.
       hero: { image: { ...IMAGES.ragnarUnderway, position: "50% 50%" }, mobilePosition: "50% 50%", fade: 12, whole: { width: 60 } },
       overview: {
-        // Crewed configuration; small source, so shown at its own aspect in the narrower column.
+        // Crewed configuration, shown whole at its own aspect.
         image: { ...IMAGES.ragnarModules, position: "50% 50%" },
-        aspect: 395 / 377,
-        span: 5,
+        aspect: 1774 / 887,
         blocks: [],
       },
       // No gallery: the full-vessel image is the hero.
