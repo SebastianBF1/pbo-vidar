@@ -43,7 +43,8 @@ export function CompanyHero({ dict, locale }: { dict: Dictionary; locale: Locale
         <div className="max-w-[40rem]">
           <h1
             id="hero-title"
-            className={`rise display mt-4 leading-[0.9] md:mt-5 lg:mt-0 ${
+            // Cyrillic diacritics (Й, Ї) and descenders (Д) collide at 0.9
+            className={`rise display mt-4 md:mt-5 lg:mt-0 ${locale === "ua" ? "leading-[1.02]" : "leading-[0.9]"} ${
               long
                 ? "text-[clamp(1.95rem,8.4vw,2.625rem)] md:text-[2.75rem] lg:text-[clamp(2.75rem,3.95vw,3.6rem)]"
                 : "text-[clamp(2.625rem,11.2vw,3.75rem)] md:text-[3.75rem] lg:text-[clamp(3.75rem,5.15vw,5.6rem)]"
