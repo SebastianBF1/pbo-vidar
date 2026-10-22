@@ -55,14 +55,6 @@ export function Footer({ dict, locale }: { dict: Dictionary; locale: string }) {
               <span className="sr-only">{f.email}: </span>
               {COMPANY.email}
             </a>
-            <a
-              href={COMPANY.website.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 block w-fit font-mono text-[0.75rem] uppercase tracking-[0.2em] text-fg/70 transition-colors duration-300 hover:text-cyan"
-            >
-              {COMPANY.website.label}
-            </a>
           </div>
 
           <div className="flex flex-wrap items-start gap-x-14 gap-y-10">

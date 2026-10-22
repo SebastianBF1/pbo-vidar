@@ -5,7 +5,6 @@
  */
 export const COMPANY = {
   email: "info@pboukraine.com",
-  website: { href: "https://www.pboukraine.com", label: "www.pboukraine.com" },
   social: [
     { id: "facebook", name: "Facebook", href: "https://www.facebook.com/pboukraine" },
     { id: "instagram", name: "Instagram", href: "https://www.instagram.com/pbo_ukraine" },
