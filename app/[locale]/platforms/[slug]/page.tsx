@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/platform
   const category = (dict.platforms.items[platform.key] as { category: string }).category;
   return {
     title: fill(dict.productPage.metaTitle, { name: platform.name }),
-    description: `${category}. ${productCopy(dict, platform.key).description}`,
+    description: `${category.replace(/\.$/, "")}. ${productCopy(dict, platform.key).description}`,
     alternates: alternatesFor(locale, `/platforms/${slug}/`),
   };
 }
