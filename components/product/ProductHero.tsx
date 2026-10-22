@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { StandardPlatform } from "@/data/platforms";
-import type { DisplaySpec } from "@/lib/format";
 import { fill } from "@/lib/format";
 import type { Dictionary } from "@/lib/i18n";
 import type { ProductCopy } from "@/lib/product-copy";
-import { SpecificationStrip } from "../SpecificationStrip";
 
 /** Desktop hero height — identical on every product page; framing per product via object-position. */
 const HERO_HEIGHT = "clamp(37.5rem, 46vw, 45rem)";
 
 /**
  * Product hero. Desktop: text left, product image bleeding to the right edge, framed at the image's own
- * aspect so the whole vessel stays in view. Mobile: image first (4:3), then text. Key-spec strip below.
+ * aspect so the whole vessel stays in view. Mobile: image first (4:3), then text.
  */
 export function ProductHero({
   platform,
@@ -21,7 +19,6 @@ export function ProductHero({
   locale,
   index,
   total,
-  keySpecs,
 }: {
   platform: StandardPlatform;
   copy: ProductCopy;
@@ -29,7 +26,6 @@ export function ProductHero({
   locale: string;
   index: number;
   total: number;
-  keySpecs: DisplaySpec[];
 }) {
   const { hero } = platform.page;
   const category = (dict.platforms.items[platform.key] as { category: string }).category;
@@ -164,16 +160,6 @@ export function ProductHero({
             })}
           </p>
         </div>
-      </div>
-
-      <div className="relative z-10">
-        <SpecificationStrip
-          specs={keySpecs}
-          caption={fill(dict.productPage.keySpecs, { name: platform.name })}
-          figure={dict.productPage.keySpecsNote}
-          statusLabels={dict.status}
-          legend={dict.productPage.legend}
-        />
       </div>
     </section>
   );

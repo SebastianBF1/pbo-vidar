@@ -28,8 +28,6 @@ export const IMAGES = {
   aboutMunin: { src: asset("/images/munin-about-v2.webp"), width: 2000, height: 770 },
   muninHeroWide: { src: asset("/images/munin-hero-wide.jpg"), width: 2048, height: 682 },
   muninFront: { src: asset("/images/munin-front.jpg"), width: 394, height: 250 },
-  muninTechSide: { src: asset("/images/munin-tech-side.jpg"), width: 1370, height: 685 },
-  muninTechRear: { src: asset("/images/munin-tech-rear.jpg"), width: 1448, height: 724 },
   muninEnvRivers: { src: asset("/images/munin-env-rivers.jpg"), width: 356, height: 158 },
   muninEnvLakes: { src: asset("/images/munin-env-lakes.jpg"), width: 350, height: 158 },
   muninEnvCoastal: { src: asset("/images/munin-env-coastal.jpg"), width: 350, height: 158 },

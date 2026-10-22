@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Platform } from "@/data/platforms";
-import type { DisplaySpec } from "@/lib/format";
 import { ArrowRight } from "./Icons";
 
 export function PlatformCard({
@@ -11,8 +10,7 @@ export function PlatformCard({
   locale,
   category,
   imageAlt,
-  note,
-  specs,
+  description,
   cta,
 }: {
   platform: Platform;
@@ -22,8 +20,8 @@ export function PlatformCard({
   locale: string;
   category: string;
   imageAlt: string;
-  note?: string;
-  specs: DisplaySpec[];
+  /** Product description line (locales products.<key>.description). */
+  description: string;
   cta: string;
 }) {
   return (
@@ -68,19 +66,10 @@ export function PlatformCard({
       <div className="flex flex-1 flex-col px-4 pt-4 pb-5 sm:px-5 md:p-6 xl:p-7">
         <p className="label min-h-[4.2em] max-w-[28ch] text-[0.6875rem] md:min-h-[2.8em] md:text-[0.6563rem] xl:min-h-[4.2em] xl:text-[0.71875rem]">{category}</p>
         <h3 className={`display mt-3 leading-none ${featured ? "text-[2.5rem] md:text-[2.875rem] xl:text-[3rem]" : "text-[2.25rem] md:text-[2.625rem] xl:text-[2.75rem]"}`}>{platform.name}</h3>
+        <p className="mt-4 max-w-[34ch] text-[0.9375rem] leading-relaxed text-fg/75 xl:text-[1rem]">{description}</p>
 
-        <dl className="mt-5 border-t border-line md:mt-6">
-          {specs.map((s) => (
-            <div key={s.key} className="flex items-baseline justify-between gap-2 border-b border-line-soft py-2.5 md:gap-4 xl:py-3">
-              <dt className="min-w-0 font-mono text-[0.6875rem] uppercase leading-snug tracking-[0.08em] text-muted md:text-[0.625rem] md:tracking-[0.14em] xl:text-[0.6875rem] xl:tracking-[0.12em]">{s.label}</dt>
-              <dd className="shrink-0 whitespace-nowrap text-right font-display text-[1.0625rem] font-semibold tracking-[0.01em] text-fg xl:text-[1.1875rem]">{s.value}</dd>
-            </div>
-          ))}
-        </dl>
-
-        {note && <p className="mt-3 text-[0.6875rem] leading-snug text-muted md:mt-4 md:text-[0.7188rem] md:leading-relaxed">* {note}</p>}
-
-        <div className="mt-auto pt-5 md:pt-6">
+        <div className="mt-auto pt-7 md:pt-8">
+          <span className="mb-5 block h-px bg-line" aria-hidden />
           <Link
             href={`/${locale}/platforms/${platform.slug}`}
             className="arrow-link flex items-center justify-between font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-fg xl:text-[0.75rem] transition-colors duration-300 after:absolute after:inset-0 after:content-[''] group-hover:text-cyan"

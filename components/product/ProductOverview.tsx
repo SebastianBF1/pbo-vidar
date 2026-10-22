@@ -3,9 +3,20 @@ import type { StandardPlatform } from "@/data/platforms";
 import type { Dictionary } from "@/lib/i18n";
 import type { ProductCopy } from "@/lib/product-copy";
 import { StatusTag } from "../StatusTag";
+import { RequestSpecs } from "./RequestSpecs";
 
-/** Editorial overview: source imagery + source copy, with status tags on optional / target items. */
-export function ProductOverview({ platform, copy, dict }: { platform: StandardPlatform; copy: ProductCopy; dict: Dictionary }) {
+/** Editorial overview: source imagery + source copy, then the “Request specifications” panel. */
+export function ProductOverview({
+  platform,
+  copy,
+  dict,
+  locale,
+}: {
+  platform: StandardPlatform;
+  copy: ProductCopy;
+  dict: Dictionary;
+  locale: string;
+}) {
   const { overview } = platform.page;
   const o = copy.overview;
   const portrait = overview.span === 5;
@@ -65,31 +76,35 @@ export function ProductOverview({ platform, copy, dict }: { platform: StandardPl
             </ul>
           )}
 
-          <div className="mt-8 border-t border-line md:mt-10">
-            {overview.blocks.map(({ id, status = "stated" }) => {
-              const b = o.blocks[id];
-              if (!b) return null;
-              return (
-                <div key={id} className="border-b border-line-soft py-5">
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                    <h3 className="font-mono text-[0.75rem] uppercase leading-relaxed tracking-[0.18em] text-fg">{b.title}</h3>
-                    {status !== "stated" && <StatusTag status={status} label={dict.status[status]} />}
+          {overview.blocks.length > 0 && (
+            <div className="mt-8 border-t border-line md:mt-10">
+              {overview.blocks.map(({ id, status = "stated" }) => {
+                const b = o.blocks?.[id];
+                if (!b) return null;
+                return (
+                  <div key={id} className="border-b border-line-soft py-5">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                      <h3 className="font-mono text-[0.75rem] uppercase leading-relaxed tracking-[0.18em] text-fg">{b.title}</h3>
+                      {status !== "stated" && <StatusTag status={status} label={dict.status[status]} />}
+                    </div>
+                    {b.body && <p className="mt-3 text-[0.9688rem] leading-relaxed text-fg/80">{b.body}</p>}
+                    {b.items && (
+                      <ul className="mt-4 space-y-2.5">
+                        {b.items.map((item) => (
+                          <li key={item} className="flex gap-3 text-[0.9688rem] leading-snug text-fg/85">
+                            <span className="mt-[0.5rem] h-1 w-1 shrink-0 bg-cyan" aria-hidden />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
-                  {b.body && <p className="mt-3 text-[0.9688rem] leading-relaxed text-fg/80">{b.body}</p>}
-                  {b.items && (
-                    <ul className="mt-4 space-y-2.5">
-                      {b.items.map((item) => (
-                        <li key={item} className="flex gap-3 text-[0.9688rem] leading-snug text-fg/85">
-                          <span className="mt-[0.5rem] h-1 w-1 shrink-0 bg-cyan" aria-hidden />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          )}
+
+          <RequestSpecs productName={platform.name} dict={dict} locale={locale} />
         </div>
       </div>
     </section>

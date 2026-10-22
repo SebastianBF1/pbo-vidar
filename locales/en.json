@@ -41,75 +41,7 @@
     "ctaPrimary": "View Piranha",
     "ctaSecondary": "Our platforms",
     "imageAlt": "PIRANHA platform shown from deck and hull side",
-    "figure": "Fig. 01 — Deck / Hull",
-    "specsLabel": "PIRANHA — platform data"
-  },
-  "units": {
-    "m": "m",
-    "kg": "kg",
-    "kmh": "km/h",
-    "knots": "knots",
-    "kW": "kW",
-    "km": "km",
-    "nmi": "nmi",
-    "L": "L",
-    "hp": "hp"
-  },
-  "qualifiers": {
-    "upTo": "Up to {v}"
-  },
-  "values": {
-    "linearWaterJet": "Linear water-jet",
-    "compositeEpsGlass": "Composite EPS / glass-fibre",
-    "nativeControl": "Native 2.4 GHz – up to 600 m LOS",
-    "integrationStack": "GPS/GNSS navigation, GSM/LTE + Starlink, real-time telemetry, simultaneous day and thermal video, Ground Control Station, Emergency Stop",
-    "available": "Available",
-    "inboardDiesel": "Inboard diesel",
-    "fiberglassComposite": "Fiberglass composite",
-    "electric": "Electric",
-    "gasolineEngine": "Gasoline engine",
-    "supercap": "Supercap",
-    "autonomous": "Autonomous",
-    "compositeFiberglass": "Composite (fiberglass)",
-    "muninOperatingArea": "Rivers, lakes, coastal waters, offshore",
-    "muninEquipment": "Cameras, communication systems, sensors, payload modules",
-    "onboardOperation": "Onboard operation",
-    "electricJet": "Electric jet propulsion"
-  },
-  "specs": {
-    "length": "Length",
-    "width": "Width",
-    "beam": "Beam",
-    "height": "Height",
-    "systemWeight": "System weight",
-    "weightEmpty": "Weight (empty)",
-    "topSpeed": "Top speed",
-    "maxSpeed": "Max speed",
-    "bldcMotor": "BLDC motor",
-    "ratedLoad": "Rated load",
-    "payload": "Payload capacity",
-    "range": "Range",
-    "rangeCruise": "Range (cruise)",
-    "engines": "Engines",
-    "fuelTank": "Fuel tank",
-    "propulsion": "Propulsion",
-    "powerSupply": "Power supply",
-    "control": "Control",
-    "hull": "Hull material",
-    "operatingArea": "Operating area",
-    "estSpeed50": "Est. speed / 50 kg load",
-    "estRange50": "Est. range / 50 kg load",
-    "confirmedPayload": "Confirmed payload",
-    "inflatableHull": "Inflatable hull",
-    "jetDrive": "Jet drive",
-    "battery": "Battery",
-    "buoyancy": "Buoyancy",
-    "engineType": "Engine type",
-    "propulsionOption": "Propulsion option",
-    "remoteControl": "Remote control",
-    "optionalEquipment": "Optional equipment",
-    "integration": "Integration",
-    "autonomy": "Autonomous configuration"
+    "figure": "Fig. 01 — Deck / Hull"
   },
   "status": {
     "calculated": "Calculated",
@@ -140,8 +72,7 @@
       },
       "jetSled": {
         "category": "Electric platform for rescue & logistics",
-        "imageAlt": "JET SLED inflatable hulls with jet drive",
-        "note": "Speed and range are calculated at 50 kg payload; figures at 400 kg remain unconfirmed."
+        "imageAlt": "JET SLED inflatable hulls with jet drive"
       }
     }
   },
@@ -182,8 +113,8 @@
       "items": [
         "Unmanned surface vehicle platforms",
         "Navigation and remote-control integration",
-        "GSM/LTE, Starlink and telemetry systems",
-        "Day and thermal sensor integration",
+        "Communication and telemetry systems",
+        "Sensor integration",
         "Prototype development and field testing",
         "Local engineering and technical support"
       ]
@@ -258,29 +189,15 @@
   "productPage": {
     "back": "All platforms",
     "index": "Platform {n} / {total}",
-    "keySpecs": "{name} — key specifications",
-    "keySpecsNote": "Manufacturer data",
     "overviewLabel": "Overview",
-    "technicalLabel": "Technical specifications",
-    "legend": {
-      "stated": "Manufacturer specification",
-      "calculated": "Calculated / estimated",
-      "optional": "Optional configuration",
-      "target": "Integration target"
-    },
-    "groups": {
-      "dimensions": "Dimensions & weight",
-      "performance": "Performance",
-      "propulsion": "Propulsion & power",
-      "control": "Control & integration",
-      "construction": "Construction & operation",
-      "equipment": "Options & equipment"
-    },
     "galleryLabel": "Imagery",
     "exploreLabel": "Our platforms",
     "exploreTitle": "Other platforms",
     "metaTitle": "{name} — PBO VIDAR",
-    "discuss": "Discuss this platform"
+    "requestSpecs": {
+      "label": "Request specifications",
+      "text": "Interested in technical specifications or further details about this platform? Contact PBO VIDAR for more information."
+    }
   },
   "products": {
     "piranha": {
@@ -296,19 +213,6 @@
         "heading": "Fast. Compact. Connected.",
         "imageAlt": "PIRANHA deck with an equipment case and antennas",
         "blocks": {
-          "core": {
-            "title": "Core platform",
-            "items": [
-              "Linear water-jet propulsion",
-              "12 L buoyancy",
-              "Composite EPS / glass-fibre hull",
-              "Native 2.4 GHz control – up to 600 m LOS"
-            ]
-          },
-          "integration": {
-            "title": "PBO VIDAR integration target",
-            "body": "GPS/GNSS navigation, GSM/LTE + Starlink, real-time telemetry, simultaneous day and thermal video, Ground Control Station and Emergency Stop."
-          },
           "autonomy": {
             "title": "Optional autonomous configuration available"
           }
@@ -346,16 +250,7 @@
           "Endurance",
           "Real impact"
         ],
-        "imageAlt": "RAGNAR 28 deck with payload cases and sensor mast",
-        "blocks": {
-          "build": {
-            "title": "Platform",
-            "items": [
-              "Fiberglass composite hull",
-              "Inboard diesel engines"
-            ]
-          }
-        }
+        "imageAlt": "RAGNAR 28 deck with payload cases and sensor mast"
       }
     },
     "munin": {
@@ -369,44 +264,9 @@
       "heroAlt": "Illustration of PBO 4 MUNIN underway on a misty river",
       "overview": {
         "heading": "Designed for rivers, coastal and offshore operations.",
-        "lead": "Unmanned solutions for a safer tomorrow.",
-        "blocks": {
-          "propulsion": {
-            "title": "Electric propulsion",
-            "body": "Silent operation."
-          },
-          "equipment": {
-            "title": "Optional equipment",
-            "body": "Cameras, communication systems, sensors, payload modules."
-          }
-        }
+        "lead": "Unmanned solutions for a safer tomorrow."
       },
       "page": {
-        "keySpecs": "Key specifications",
-        "views": {
-          "title": "Technical views",
-          "note": "Illustrative views · not to scale",
-          "expand": "Enlarge: {view}",
-          "close": "Close",
-          "front": "Front view",
-          "side": "Side view",
-          "rear": "Rear view",
-          "frontAlt": "PBO 4 MUNIN seen from the bow on a river",
-          "sideAlt": "Illustrated side view of PBO 4 MUNIN with length and height dimension lines",
-          "rearAlt": "Illustrated rear view of PBO 4 MUNIN with beam and height dimension lines"
-        },
-        "specsTitle": "Technical specifications",
-        "features": {
-          "title": "Key features",
-          "speed": "High speed",
-          "range": "Long range",
-          "payload": "Payload",
-          "electric": "Electric propulsion",
-          "electricSub": "Silent operation",
-          "control": "Unmanned",
-          "controlSub": "Optional remote control",
-          "waters": "Rivers, coastal & offshore operations"
-        },
         "environments": {
           "title": "Operational environments",
           "rivers": "Rivers",

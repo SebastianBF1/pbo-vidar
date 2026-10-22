@@ -12,7 +12,7 @@ export interface ProductCopy {
     chips?: string[];
     imageAlt: string;
     caption?: string;
-    blocks: Record<string, { title: string; body?: string; items?: string[] }>;
+    blocks?: Record<string, { title: string; body?: string; items?: string[] }>;
   };
   gallery?: Record<string, { alt: string; caption?: string }>;
 }
@@ -28,16 +28,8 @@ export interface MuninCopy {
   overview: {
     heading: string;
     lead: string;
-    blocks: { propulsion: { title: string; body: string }; equipment: { title: string; body: string } };
   };
   page: {
-    keySpecs: string;
-    views: Record<"title" | "note" | "expand" | "close" | "front" | "side" | "rear" | "frontAlt" | "sideAlt" | "rearAlt", string>;
-    specsTitle: string;
-    features: Record<
-      "title" | "speed" | "range" | "payload" | "electric" | "electricSub" | "control" | "controlSub" | "waters",
-      string
-    >;
     environments: Record<"title" | "rivers" | "lakes" | "coastal" | "offshore", string>;
   };
 }

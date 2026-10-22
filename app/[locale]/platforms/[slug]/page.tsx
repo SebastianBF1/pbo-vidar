@@ -6,14 +6,12 @@ import { Header } from "@/components/Header";
 import { RevealObserver } from "@/components/RevealObserver";
 import { ScrollToHash } from "@/components/ScrollToHash";
 import { OtherPlatforms } from "@/components/product/OtherPlatforms";
-import { ProductEnquiry } from "@/components/product/ProductEnquiry";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductHero } from "@/components/product/ProductHero";
 import { ProductOverview } from "@/components/product/ProductOverview";
-import { ProductSpecs } from "@/components/product/ProductSpecs";
-import { getPlatform, isStandard, keySpecsOf, platforms, publicSpecs } from "@/data/platforms";
+import { getPlatform, isStandard, platforms } from "@/data/platforms";
 import { MuninPage } from "@/components/munin/MuninPage";
-import { displaySpecs, fill } from "@/lib/format";
+import { fill } from "@/lib/format";
 import { alternatesFor } from "@/lib/seo";
 import { getDictionary, hasLocale, locales } from "@/lib/i18n";
 import { productCopy } from "@/lib/product-copy";
@@ -70,26 +68,13 @@ async function PlatformContent({ params }: { params: PageProps<"/[locale]/platfo
               locale={locale}
               index={index}
               total={platforms.length}
-              keySpecs={displaySpecs(keySpecsOf(platform), dict, locale)}
             />
-            <ProductOverview platform={platform} copy={copy} dict={dict} />
-            {/* Every rendered value goes through publicSpecs()/displaySpecs(). */}
-            <ProductSpecs
-              platform={platform}
-              dict={dict}
-              specs={publicSpecs(platform.specs).map((s) => ({ ...displaySpecs([s], dict, locale)[0], group: s.group }))}
-            />
+            <ProductOverview platform={platform} copy={copy} dict={dict} locale={locale} />
             {platform.page.gallery && <ProductGallery rows={platform.page.gallery} copy={copy} dict={dict} />}
           </>
         ) : (
           <MuninPage platform={platform} dict={dict} locale={locale} />
         )}
-        <ProductEnquiry
-          productName={platform.name}
-          locale={locale}
-          label={dict.productPage.discuss}
-          collaborationLabel={dict.opportunities.productLink}
-        />
         <OtherPlatforms current={platform} dict={dict} locale={locale} />
       </main>
       <Footer dict={dict} locale={locale} />

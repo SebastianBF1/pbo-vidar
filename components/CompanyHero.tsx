@@ -6,7 +6,7 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 import { ArrowRight } from "./Icons";
 
 /**
- * Homepage hero introducing the company (replaces the PIRANHA hero, which stays in components/Hero.tsx).
+ * Homepage hero introducing the company.
  * Same structure as the product heroes: text left over the navy page, the river image on the right with a
  * soft fade toward the text; on phones the image comes first, below the header.
  */

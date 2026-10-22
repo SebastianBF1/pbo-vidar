@@ -1,6 +1,5 @@
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { platforms } from "@/data/platforms";
-import { displaySpecs } from "@/lib/format";
 import { PlatformCard } from "./PlatformCard";
 
 export function PlatformsSection({ dict, locale }: { dict: Dictionary; locale: Locale }) {
@@ -37,7 +36,7 @@ export function PlatformsSection({ dict, locale }: { dict: Dictionary; locale: L
 
         <ul className="carousel-x no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-px-5 px-5 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-6 md:overflow-visible md:px-0 xl:grid-cols-4 xl:gap-5">
           {platforms.map((platform, i) => {
-            const item = p.items[platform.key] as { category: string; imageAlt: string; note?: string };
+            const item = p.items[platform.key];
             return (
               <li
                 key={platform.slug}
@@ -52,8 +51,7 @@ export function PlatformsSection({ dict, locale }: { dict: Dictionary; locale: L
                   locale={locale}
                   category={item.category}
                   imageAlt={item.imageAlt}
-                  note={platform.hasNote ? item.note : undefined}
-                  specs={displaySpecs(platform.cardSpecs, dict, locale)}
+                  description={dict.products[platform.key].description}
                   cta={p.viewDetails}
                 />
               </li>

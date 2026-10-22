@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { platforms, type Platform } from "@/data/platforms";
-import { displaySpecs } from "@/lib/format";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { ArrowRight } from "../Icons";
 import { PlatformCard } from "../PlatformCard";
@@ -38,7 +37,7 @@ export function OtherPlatforms({ current, dict, locale }: { current: Platform; d
 
         <ul className="no-scrollbar -mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-5 px-5 pb-2 md:mx-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0">
           {others.map((platform, i) => {
-            const item = dict.platforms.items[platform.key] as { category: string; imageAlt: string; note?: string };
+            const item = dict.platforms.items[platform.key];
             return (
               <li
                 key={platform.slug}
@@ -52,8 +51,7 @@ export function OtherPlatforms({ current, dict, locale }: { current: Platform; d
                   locale={locale}
                   category={item.category}
                   imageAlt={item.imageAlt}
-                  note={platform.hasNote ? item.note : undefined}
-                  specs={displaySpecs(platform.cardSpecs, dict, locale)}
+                  description={dict.products[platform.key].description}
                   cta={dict.platforms.viewDetails}
                 />
               </li>

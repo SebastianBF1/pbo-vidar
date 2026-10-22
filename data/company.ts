@@ -52,18 +52,16 @@ export const ENQUIRY_MAILTO = mailto(
   ].join("\r\n"),
 );
 
-/** “Discuss this platform” on a product page: short neutral draft, English on both language versions. */
-export function productEnquiryMail(productName: string) {
+/** “Request specifications” on a product page — English on both language versions; nothing is sent automatically. */
+export function specsRequestMail(productName: string) {
   const name = productName.replace(/[“”"]/g, ""); // PBO 4 “MUNIN” → PBO 4 MUNIN
-  const subject = `${name} – Product Enquiry`;
+  const subject = `${name} – Technical Specifications Request`;
   const body = [
     "Hello PBO VIDAR team,",
     "",
-    `I would like to learn more about ${name}.`,
+    `I am interested in receiving technical specifications and further information about ${name}.`,
     "",
-    "My questions:",
-    "",
-    "[Your questions]",
+    "Please let me know how I can obtain additional details.",
     "",
     "Best regards,",
   ].join("\r\n");
